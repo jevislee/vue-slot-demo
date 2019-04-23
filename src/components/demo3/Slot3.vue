@@ -1,11 +1,12 @@
 <template>
   <div class="father">
     <h3>这里是父组件</h3>
+    <!--我的注释:该页面现在只有样式了,数据在child组件里定义,该页面获取child组件里的数据并渲染,slot-scope应该是用于获得slot并给一个命名,然后通过该slot命名->slot里的属性名就可以获取slot里对应的数据-->
     <!--第一次使用：用flex展示数据-->
     <child>
-      <template slot-scope="user">
+      <template slot-scope="copy1">
         <div class="tmpl">
-          <span v-for="item in user.data">{{item}}</span>
+          <span v-for="item in copy1.data2">{{item}}</span>
         </div>
       </template>
 
@@ -13,9 +14,9 @@
 
     <!--第二次使用：用列表展示数据-->
     <child>
-      <template slot-scope="user">
+      <template slot-scope="copy2">
         <ul>
-          <li v-for="item in user.data">{{item}}</li>
+          <li v-for="item in copy2.data2">{{item}}</li>
         </ul>
       </template>
 
@@ -23,8 +24,8 @@
 
     <!--第三次使用：直接显示数据-->
     <child>
-      <template slot-scope="user">
-       {{user.data}}
+      <template slot-scope="copy3">
+       {{copy3.data2}}
       </template>
 
     </child>

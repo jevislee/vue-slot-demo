@@ -1,6 +1,7 @@
 <template>
     <div class="father">
         <h3>这里是父组件</h3>
+        <!--我的注释:child节点是一个自定义的组件,child节点里面的div会替换掉Child.vue里的无名slot节点,样式和数据都在该页面-->
         <child>
             <div class="tmpl">
               <span>菜单1</span>
